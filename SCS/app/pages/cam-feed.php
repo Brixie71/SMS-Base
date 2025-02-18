@@ -10,10 +10,7 @@ if (!isset($CamFeed)) {
 $CamFeed->run();
 ?>
 
-<div class="card ew-card shadow-lg">
-    <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Camera Feed</h3>
-    </div>
+<div class="card ew-card shadow-sm">
     <div class="card-body p-4">
         <div class="row">
             <!-- Camera Feed Section -->
