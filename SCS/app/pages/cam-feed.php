@@ -107,6 +107,7 @@ canvas {
 }
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
+<!-- <script defer src="app/pages/detection/face-api.js"></script> -->
 <!-- JavaScript -->
 <script>
 $(function() {
@@ -114,6 +115,7 @@ $(function() {
     let canvas;
     let stream = null;
 
+    
     // Check if face-api is loaded
     function waitForFaceAPI() {
         return new Promise((resolve, reject) => {
@@ -132,6 +134,12 @@ $(function() {
 
     // Initialize camera elements
     async function initializeCamera() {
+
+        const faceDetectionOptions = new faceapi.TinyFaceDetectorOptions({
+            inputSize: 512,      // Increase from default 320 for better accuracy
+            scoreThreshold: 0.3  // Lower threshold to detect more faces (default is 0.5)
+        });
+
         try {
             // Wait for face-api to load
             await waitForFaceAPI();
@@ -150,6 +158,12 @@ $(function() {
                 faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model'),
                 faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model'),
                 faceapi.nets.faceExpressionNet.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model')
+
+                /*faceapi.nets.tinyFaceDetector.loadFromUri('app/pages/model'),
+                faceapi.nets.faceLandmark68Net.loadFromUri('app/pages/model'),
+                faceapi.nets.faceRecognitionNet.loadFromUri('app/pages/model'),
+                faceapi.nets.faceExpressionNet.loadFromUri('app/pages/model')*/
+
             ]).catch(error => {
                 throw new Error('Failed to load face detection models: ' + error.message);
             });
@@ -179,7 +193,7 @@ $(function() {
 
                     const detections = await faceapi.detectAllFaces(
                         video,
-                        new faceapi.TinyFaceDetectorOptions()
+                        faceDetectionOptions
                     )
                     .withFaceLandmarks()
                     .withFaceExpressions();
