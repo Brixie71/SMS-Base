@@ -70,6 +70,13 @@ $CamFeed->run();
 
 <!-- Custom Styles -->
 <style>
+
+canvas {
+
+    position: absolute;
+
+}
+
 .status-indicator {
     display: inline-block;
     width: 12px;
@@ -99,7 +106,7 @@ $CamFeed->run();
     background: #555;
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
 <!-- JavaScript -->
 <script>
 $(function() {
@@ -107,9 +114,29 @@ $(function() {
     let canvas;
     let stream = null;
 
+    // Check if face-api is loaded
+    function waitForFaceAPI() {
+        return new Promise((resolve, reject) => {
+            const checkFaceAPI = () => {
+                if (window.faceapi) {
+                    resolve();
+                } else {
+                    setTimeout(checkFaceAPI, 100);
+                }
+            };
+            checkFaceAPI();
+            // Timeout after 10 seconds
+            setTimeout(() => reject(new Error('Face-API failed to load')), 10000);
+        });
+    }
+
     // Initialize camera elements
-    function initializeCamera() {
+    async function initializeCamera() {
         try {
+            // Wait for face-api to load
+            await waitForFaceAPI();
+            console.log('Face-API loaded successfully');
+
             video = document.getElementById('video');
             canvas = document.getElementById('overlay');
             
@@ -117,10 +144,75 @@ $(function() {
                 throw new Error('Video or canvas element not found');
             }
 
+            // Load face detection models
+            await Promise.all([
+                faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model'),
+                faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model'),
+                faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model'),
+                faceapi.nets.faceExpressionNet.loadFromUri('https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model')
+            ]).catch(error => {
+                throw new Error('Failed to load face detection models: ' + error.message);
+            });
+
+            console.log('Face detection models loaded successfully');
+
             // Add event listeners
             document.getElementById('startButton').addEventListener('click', startCamera);
             document.getElementById('endButton').addEventListener('click', stopCamera);
             
+            // Set up face detection on video play
+            // Set up face detection on video play
+            video.addEventListener('play', () => {
+                // Get the actual displayed dimensions of the video
+                const videoWidth = video.clientWidth;
+                const videoHeight = video.clientHeight;
+                
+                // Set canvas dimensions to match video display size
+                canvas.width = videoWidth;
+                canvas.height = videoHeight;
+                
+                const displaySize = { width: videoWidth, height: videoHeight };
+                faceapi.matchDimensions(canvas, displaySize);
+
+                setInterval(async () => {
+                    if (video.paused || video.ended) return;
+
+                    const detections = await faceapi.detectAllFaces(
+                        video,
+                        new faceapi.TinyFaceDetectorOptions()
+                    )
+                    .withFaceLandmarks()
+                    .withFaceExpressions();
+
+                    // Resize detections to match the display size
+                    const resizedDetections = faceapi.resizeResults(detections, displaySize);
+                    
+                    // Clear previous drawings
+                    const context = canvas.getContext('2d');
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    // Draw new detections
+                    faceapi.draw.drawDetections(canvas, resizedDetections);
+                    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+                    faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+
+                    // Update detection info
+                    if (detections.length > 0) {
+                        const detection = detections[0];
+                        const expressions = detection.expressions;
+                        const dominantExpression = Object.entries(expressions)
+                            .reduce((a, b) => a[1] > b[1] ? a : b)[0];
+                            
+                        document.getElementById('detectionInfo').innerHTML = `
+                            <div>Faces detected: ${detections.length}</div>
+                            <div>Expression: ${dominantExpression}</div>
+                        `;
+                    } else {
+                        document.getElementById('detectionInfo').innerHTML = 'No faces detected';
+                    }
+                }, 100);
+            });
+
             updateStatus('Camera ready', true);
         } catch (error) {
             console.error('Initialization error:', error);
@@ -138,6 +230,7 @@ $(function() {
 
             // Request camera access
             stream = await navigator.mediaDevices.getUserMedia({
+                audio: false,
                 video: {
                     width: { ideal: 1280 },
                     height: { ideal: 720 },
@@ -180,6 +273,11 @@ $(function() {
             document.getElementById('startButton').style.display = 'inline-block';
             document.getElementById('endButton').style.display = 'none';
             document.getElementById('cameraDetails').innerHTML = '<p class="text-muted mb-0">No camera active.</p>';
+            
+            // Clear the canvas
+            const context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('detectionInfo').innerHTML = '';
             
             updateStatus('Camera stopped', false);
         }
