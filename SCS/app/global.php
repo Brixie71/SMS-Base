@@ -6,6 +6,7 @@ use Aws\S3\S3Client;
 
 include_once(dirname(__DIR__, 1) . "/app/lib/ApiService.php");
 include_once(dirname(__DIR__, 1) . "/app/lib/NotificationManager.php");
+//include_once(dirname(__DIR__, 1) . "/app/lib/CameraService.php");
 
 $s3client = new S3Client([
     'version' => 'latest',
