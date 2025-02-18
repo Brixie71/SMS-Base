@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Gear -->
+  <path d="M50 35 L53 35 L54 30 L46 30 L47 35 L50 35" fill="#0038A8">
+    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#CE1126" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Gear Teeth -->
+  <g stroke="#0038A8" stroke-width="2">
+    <line x1="50" y1="30" x2="50" y2="35">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+    </line>
+    <line x1="50" y1="65" x2="50" y2="70">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+    </line>
+    <line x1="30" y1="50" x2="35" y2="50">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+    </line>
+    <line x1="65" y1="50" x2="70" y2="50">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>

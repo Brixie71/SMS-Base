@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Shield -->
+  <path d="M50 25 L70 35 L65 65 L50 75 L35 65 L30 35 Z" fill="#0038A8">
+    <animate attributeName="fill" values="#0038A8;#CE1126;#0038A8" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Camera Lens -->
+  <circle cx="50" cy="45" r="8" fill="#CE1126"/>
+  <circle cx="50" cy="45" r="5" fill="#FCD116"/>
+  <circle cx="50" cy="45" r="3" fill="#0038A8">
+    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Scanning Line -->
+  <line x1="35" y1="45" x2="65" y2="45" stroke="#FCD116" stroke-width="1">
+    <animate attributeName="y1" values="35;55;35" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="35;55;35" dur="3s" repeatCount="indefinite"/>
+  </line>
+</svg>

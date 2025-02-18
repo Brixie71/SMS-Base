@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Lock Body -->
+  <rect x="35" y="45" width="30" height="25" rx="2" fill="#0038A8">
+    <animate attributeName="fill" values="#0038A8;#CE1126;#0038A8" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Lock Shackle -->
+  <path d="M40 45 L40 35 Q50 25 60 35 L60 45" fill="none" stroke="#CE1126" stroke-width="4" stroke-linecap="round">
+    <animate attributeName="d" values="M40 45 L40 35 Q50 25 60 35 L60 45;M40 45 L40 30 Q50 20 60 30 L60 45;M40 45 L40 35 Q50 25 60 35 L60 45" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Keyhole -->
+  <circle cx="50" cy="55" r="3" fill="#FCD116"/>
+  <rect x="48" y="55" width="4" height="6" fill="#FCD116"/>
+</svg>

@@ -1,0 +1,93 @@
+erDiagram
+    security_zones ||--o{ access_points : "contains"
+    security_zones ||--o{ cctv_cameras : "monitors"
+    security_zones ||--o{ incidents : "occurs_in"
+    
+    security_zones {
+        int zone_id PK
+        int tower_id FK
+        string name
+        text description
+        int security_level
+        text access_requirements
+        boolean is_active
+        int created_by
+        timestamp created_at
+    }
+
+    access_points ||--o{ access_logs : "records"
+    access_points {
+        int point_id PK
+        int zone_id FK
+        string name
+        string type
+        string location_description
+        string status
+        string ip_address
+        timestamp last_maintained
+        int maintained_by
+    }
+
+    access_cards ||--o{ access_logs : "used_in"
+    access_cards {
+        int card_id PK
+        string card_number
+        int employee_id
+        date issue_date
+        date expiry_date
+        string status
+        int access_level
+        int issued_by
+        boolean is_active
+    }
+
+    access_logs {
+        int log_id PK
+        int point_id FK
+        int card_id FK
+        int employee_id
+        timestamp timestamp
+        string access_type
+        string status
+        string verification_method
+    }
+
+    cctv_cameras ||--o{ cctv_recordings : "generates"
+    cctv_cameras ||--o{ facial_recognition_logs : "detects"
+    cctv_cameras {
+        int camera_id PK
+        int zone_id FK
+        string name
+        string location_description
+        string type
+        string model
+        string ip_address
+        text rtsp_url
+        string status
+        timestamp last_maintained
+    }
+
+    incidents ||--o{ incident_responses : "has"
+    incidents ||--o{ incident_updates : "tracks"
+    incidents {
+        int incident_id PK
+        int zone_id FK
+        int reported_by
+        timestamp incident_time
+        string type
+        string priority
+        string status
+        text description
+        text initial_response
+    }
+
+    patrol_routes ||--o{ patrol_checkpoints : "includes"
+    patrol_routes ||--o{ patrol_logs : "records"
+    patrol_routes {
+        int route_id PK
+        string name
+        text description
+        int estimated_duration
+        int created_by
+        boolean is_active
+    }

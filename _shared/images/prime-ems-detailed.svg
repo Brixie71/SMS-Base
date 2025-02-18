@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Organization Structure -->
+  <g>
+    <!-- Top Level -->
+    <circle cx="50" cy="30" r="6" fill="#0038A8">
+      <animate attributeName="r" values="6;7;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Connection Lines -->
+    <line x1="50" y1="36" x2="50" y2="44" stroke="#CE1126" stroke-width="2"/>
+    <line x1="35" y1="44" x2="65" y2="44" stroke="#CE1126" stroke-width="2"/>
+    
+    <!-- Mid Level -->
+    <circle cx="35" cy="50" r="6" fill="#0038A8">
+      <animate attributeName="r" values="6;7;6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="65" cy="50" r="6" fill="#0038A8">
+      <animate attributeName="r" values="6;7;6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Bottom Connections -->
+    <line x1="35" y1="56" x2="35" y2="64" stroke="#CE1126" stroke-width="2"/>
+    <line x1="65" y1="56" x2="65" y2="64" stroke="#CE1126" stroke-width="2"/>
+    
+    <!-- Bottom Level -->
+    <circle cx="35" cy="70" r="6" fill="#0038A8">
+      <animate attributeName="r" values="6;7;6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="65" cy="70" r="6" fill="#0038A8">
+      <animate attributeName="r" values="6;7;6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

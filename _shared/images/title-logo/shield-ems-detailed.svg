@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1190 512" style="enable-background:new 0 0 1190 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.9;fill:#FF6600;enable-background:new    ;}
+	.st2{opacity:0.2;}
+	.st3{fill:none;stroke:#FFFFFF;}
+	.st4{opacity:0.4;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:2;}
+	.st6{fill:url(#SVGID_2_);}
+	.st7{fill:#FF0000;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:url(#SVGID_3_);}
+	.st10{fill:#FFFF00;}
+	.st11{fill:url(#SVGID_4_);}
+	.st12{fill:#003399;}
+	.st13{font-family:'Arial';}
+	.st14{font-size:8.3984px;}
+	.st15{opacity:0.1;fill:none;stroke:#FFFFFF;stroke-width:2;enable-background:new    ;}
+	.st16{fill:#0D2449;}
+</style>
+<g>
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-40.8696" y1="676.522" x2="-40.0297" y2="675.6822" gradientTransform="matrix(448 0 0 -512 18359 346402.5938)">
+			<stop  offset="0" style="stop-color:#003399"/>
+			<stop  offset="1" style="stop-color:#002266"/>
+		</linearGradient>
+		<path class="st0" d="M222.1,41c112.5,0,188.1,26.9,188.1,26.9l-26.9,335.9c0,0-48.7,67.2-161.2,67.2S60.8,403.8,60.8,403.8
+			L34,67.9C34,67.9,109.5,41,222.1,41z"/>
+		<path class="st1" d="M128,148.5h188.1c7.4,0,13.4,6,13.4,13.4v188.1c0,7.4-6,13.4-13.4,13.4H128c-7.4,0-13.4-6-13.4-13.4V161.9
+			C114.6,154.5,120.6,148.5,128,148.5z"/>
+		<g class="st2">
+			<line class="st3" x1="114.6" y1="202.2" x2="329.6" y2="202.2"/>
+			<line class="st3" x1="114.6" y1="256" x2="329.6" y2="256"/>
+			<line class="st3" x1="114.6" y1="309.8" x2="329.6" y2="309.8"/>
+			<line class="st3" x1="168.3" y1="148.5" x2="168.3" y2="363.5"/>
+			<line class="st3" x1="222.1" y1="148.5" x2="222.1" y2="363.5"/>
+			<line class="st3" x1="275.8" y1="148.5" x2="275.8" y2="363.5"/>
+		</g>
+		<g class="st4">
+			<path class="st5" d="M141.5,188.8c53.8,0,107.5,0,161.2,0"/>
+			<path class="st5" d="M141.5,256c53.8,0,107.5,0,161.2,0"/>
+			<path class="st5" d="M141.5,323.2c53.8,0,107.5,0,161.2,0"/>
+			<path class="st5" d="M154.9,175.4c0,53.8,0,107.5,0,161.2"/>
+			<path class="st5" d="M222.1,175.4c0,53.8,0,107.5,0,161.2"/>
+			<path class="st5" d="M289.3,175.4c0,53.8,0,107.5,0,161.2"/>
+		</g>
+		<g transform="translate(256,256)">
+			
+				<radialGradient id="SVGID_2_" cx="-296.3524" cy="416.9523" r="0.4199" gradientTransform="matrix(48 0 0 -48 14191 20013.7129)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FF6600;stop-opacity:0.6"/>
+				<stop  offset="1" style="stop-color:#FF6600;stop-opacity:0"/>
+			</radialGradient>
+			<circle class="st6" cx="-33.9" cy="0" r="20.2">
+			
+				<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="0.6;0.2;0.6">
+				</animate>
+			
+				<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="12;24;12">
+				</animate>
+			</circle>
+			<path class="st7" d="M-33.9,0v-20.2l0,0V0z			">
+<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="1s" fill="remove" repeatCount="indefinite" restart="always" values="1;0.6;1">
+					</animate>
+			</path>
+			<path class="st8" d="M-39-20.2l5-10.1l5,10.1H-39z"/>
+			<circle class="st8" cx="-33.9" cy="-22.7" r="0.8"/>
+		</g>
+		<g>
+			<g transform="translate(176,176)">
+				
+					<radialGradient id="SVGID_3_" cx="-215.8783" cy="494.8332" r="0.4199" gradientTransform="matrix(32 0 0 -32 6887 15847.4746)" gradientUnits="userSpaceOnUse">
+					<stop  offset="0" style="stop-color:#FF6600;stop-opacity:0.6"/>
+					<stop  offset="1" style="stop-color:#FF6600;stop-opacity:0"/>
+				</radialGradient>
+				<circle class="st9" cx="-21.1" cy="12.8" r="13.4">
+				
+					<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.4;0.1;0.4">
+					</animate>
+				
+					<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="8;16;8">
+					</animate>
+				</circle>
+				<path class="st10" d="M-21.1,12.8V-0.6l0,0V12.8z				">
+<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="1.5s" fill="remove" repeatCount="indefinite" restart="always" values="0.8;0.4;0.8">
+						</animate>
+				</path>
+			</g>
+			<g transform="translate(336,336)">
+				
+					<radialGradient id="SVGID_4_" cx="-376.6791" cy="335.634" r="0.4199" gradientTransform="matrix(32 0 0 -32 12007 10727.4746)" gradientUnits="userSpaceOnUse">
+					<stop  offset="0" style="stop-color:#FF6600;stop-opacity:0.6"/>
+					<stop  offset="1" style="stop-color:#FF6600;stop-opacity:0"/>
+				</radialGradient>
+				<circle class="st11" cx="-46.7" cy="-12.8" r="13.4">
+				
+					<animate  accumulate="none" additive="replace" attributeName="opacity" begin="1s" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.4;0.1;0.4">
+					</animate>
+				
+					<animate  accumulate="none" additive="replace" attributeName="r" begin="1s" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="8;16;8">
+					</animate>
+				</circle>
+				<path class="st10" d="M-46.7-12.8v-13.4l0,0V-12.8z				">
+<animate  accumulate="none" additive="replace" attributeName="opacity" begin="1s" calcMode="linear" dur="1.5s" fill="remove" repeatCount="indefinite" restart="always" values="0.8;0.4;0.8">
+						</animate>
+				</path>
+			</g>
+		</g>
+		<g>
+			<g transform="translate(140,160)">
+				<path class="st12" d="M-12,15.4h26.9c1.9,0,3.4,1.5,3.4,3.4v6.7c0,1.9-1.5,3.4-3.4,3.4H-12c-1.9,0-3.4-1.5-3.4-3.4v-6.7
+					C-15.3,16.9-13.8,15.4-12,15.4z"/>
+				<text transform="matrix(1 0 0 1 -9.9839 25.4533)" class="st8 st13 st14">Active</text>
+			</g>
+			<g transform="translate(140,320)">
+				<path class="st12" d="M-12-10.2h26.9c1.9,0,3.4,1.5,3.4,3.4v6.7c0,1.9-1.5,3.4-3.4,3.4H-12c-1.9,0-3.4-1.5-3.4-3.4v-6.7
+					C-15.3-8.7-13.8-10.2-12-10.2z"/>
+				<text transform="matrix(1 0 0 1 -7.1851 -0.1717)" class="st8 st13 st14">Alert</text>
+			</g>
+		</g>
+		<circle class="st15" cx="222.1" cy="256" r="100.8">
+		
+			<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0;120">
+			</animate>
+		
+			<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.4;0">
+			</animate>
+		</circle>
+	</g>
+	<g>
+		<path class="st16" d="M641.4,162.4H512.3v108.9h-49.8v-20.5h29V141.9h143.1L641.4,162.4z M647.6,370.1h-99
+			c-17.6,0-31.5-5.1-41.8-15.2c-10.2-10.1-15.4-24-15.4-41.5V301h-29v-20.2h49.8v32.6c0,24.3,12.2,36.4,36.6,36.4h98.7V370.1z
+			 M651.3,192.2H541.8v58.6h80.1l6.8,20.5H521.6V172h122.9L651.3,192.2z M647.6,340.8H549c-18.3,0-27.4-9.1-27.4-27.4v-32.6H632
+			l6.5,20.2h-96.8v12.4c0,2.5,0.2,4.5,0.6,5.9c1.3,0.4,3.3,0.6,6.2,0.6h99V340.8z"/>
+		<path class="st16" d="M950.6,370.1h-20.2V199c0-24.4-12-36.6-36.1-36.6H693.1v207.7h-20.9V141.9H894c17.5,0,31.3,5.1,41.5,15.4
+			c10.1,10.2,15.2,24.2,15.2,41.8V370.1z M807.2,370.1h-20.9V199c0-2.9-0.2-4.9-0.6-6.2c-1.3-0.4-3-0.6-5.3-0.6h-57.9v177.9h-20.2
+			V172h104.9V370.1z M921.3,370.1h-20.9V199c0-2.9-0.2-4.9-0.6-6.2c-1.3-0.4-3.2-0.6-5.9-0.6h-57.3v177.9h-20.2V172h77.8
+			c18,0,27.1,9,27.1,27.1V370.1z"/>
+		<path class="st16" d="M1147.6,213h-20.2v-50.6h-85.8c-13.4,0-24.9,4.8-34.5,14.5c-9.6,9.7-14.4,21.3-14.4,34.9
+			c0,13.5,4.8,25,14.3,34.5c9.6,9.6,21.1,14.3,34.5,14.3h45.4c10.9,0,20.3,3.9,28.1,11.7c7.8,7.8,11.7,17.2,11.7,28.1
+			c0,10.9-3.9,20.3-11.7,28.3c-7.8,7.9-17.2,11.9-28.1,11.9h-78.5v-43.1h20.2V320h57.9c5.3,0,9.8-2,13.6-6c3.8-4,5.7-8.6,5.7-13.9
+			c0-5.3-1.9-9.8-5.7-13.6c-3.8-3.8-8.3-5.7-13.6-5.7h-45.4c-19.1,0-35.4-6.8-49-20.4c-13.6-13.6-20.4-29.9-20.4-49
+			c0-19.2,6.8-35.6,20.4-49.2c13.6-13.6,29.9-20.4,49-20.4h106.3V213z M1156,300.2c0,19.2-6.8,35.6-20.4,49.4
+			c-13.6,13.7-29.9,20.6-49,20.6H978.4v-72.7h20.9v52.2h87.7c13.5,0,25-4.8,34.5-14.5c9.5-9.7,14.3-21.2,14.3-34.7
+			c0-13.5-4.8-25-14.3-34.5c-9.5-9.5-21.1-14.3-34.5-14.3h-45.4c-10.9,0-20.3-3.9-28-11.7c-7.7-7.8-11.6-17.2-11.6-28.1
+			c0-11,3.9-20.4,11.6-28.2c7.7-7.7,17.1-11.6,28-11.6h76.7V213h-20.9v-20.9h-56.2c-5.2,0-9.7,1.9-13.4,5.7
+			c-3.8,3.8-5.7,8.3-5.7,13.7c0,5.2,1.9,9.7,5.7,13.5c3.8,3.8,8.2,5.7,13.4,5.7h45.4c19.2,0,35.6,6.8,49.1,20.4
+			C1149.3,264.6,1156,281,1156,300.2z"/>
+	</g>
+</g>
+</svg>

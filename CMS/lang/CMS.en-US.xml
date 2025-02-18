@@ -1,0 +1,750 @@
+<ew-language date="2025/1/13" id="en-US" author="e.World Technology Limited">
+  <project>
+    <phrase id="bodytitle" value="CMS SYSTEM - Client Management System " />
+    <phrase id="footertext" value="&amp;copy;2024 ITBS Corporation. All rights reserved." />
+    <menu id="11">
+      <phrase id="menutext" value="notifications" />
+    </menu>
+    <menu id="9">
+      <phrase id="menutext" value="Dashboard" />
+    </menu>
+    <menu id="1">
+      <phrase id="menutext" value="audit logs" />
+    </menu>
+    <menu id="4">
+      <phrase id="menutext" value="user level assignments" />
+    </menu>
+    <menu id="5">
+      <phrase id="menutext" value="user level permissions" />
+    </menu>
+    <menu id="21">
+      <phrase id="menutext" value="User Management" />
+    </menu>
+    <menu id="3">
+      <phrase id="menutext" value="systems" />
+    </menu>
+    <menu id="10">
+      <phrase id="menutext" value="Departments" />
+    </menu>
+    <menu id="6">
+      <phrase id="menutext" value="user levels" />
+    </menu>
+    <menu id="8">
+      <phrase id="menutext" value="audit logs" />
+    </menu>
+    <menu id="7">
+      <phrase id="menutext" value="users" />
+    </menu>
+    <menu id="45">
+      <phrase id="menutext" value="CLIENT MANAGEMENT" />
+    </menu>
+    <menu id="22">
+      <phrase id="menutext" value="client contacts" />
+    </menu>
+    <menu id="23">
+      <phrase id="menutext" value="client contracts" />
+    </menu>
+    <menu id="24">
+      <phrase id="menutext" value="client documents" />
+    </menu>
+    <menu id="25">
+      <phrase id="menutext" value="client equipment" />
+    </menu>
+    <menu id="26">
+      <phrase id="menutext" value="client types" />
+    </menu>
+    <menu id="27">
+      <phrase id="menutext" value="clients" />
+    </menu>
+    <menu id="46">
+      <phrase id="menutext" value="CONTRACT MANAGEMENT" />
+    </menu>
+    <menu id="28">
+      <phrase id="menutext" value="contract services" />
+    </menu>
+    <menu id="29">
+      <phrase id="menutext" value="contract terms" />
+    </menu>
+    <menu id="47">
+      <phrase id="menutext" value="SERVICE MANAGEMENT" />
+    </menu>
+    <menu id="30">
+      <phrase id="menutext" value="service requests" />
+    </menu>
+    <menu id="31">
+      <phrase id="menutext" value="service types" />
+    </menu>
+    <menu id="48">
+      <phrase id="menutext" value="SUPPORT MANAGEMENT" />
+    </menu>
+    <menu id="32">
+      <phrase id="menutext" value="support ticket updates" />
+    </menu>
+    <menu id="33">
+      <phrase id="menutext" value="support tickets" />
+    </menu>
+    <table id="audit_logs">
+      <phrase id="tblcaption" value="audit logs" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="date_time">
+        <phrase id="fldcaption" value="date time" />
+      </field>
+      <field id="script">
+        <phrase id="fldcaption" value="script" />
+      </field>
+      <field id="user">
+        <phrase id="fldcaption" value="user" />
+      </field>
+      <field id="_action">
+        <phrase id="fldcaption" value="action" />
+      </field>
+      <field id="_table">
+        <phrase id="fldcaption" value="table" />
+      </field>
+      <field id="field">
+        <phrase id="fldcaption" value="field" />
+      </field>
+      <field id="key_value">
+        <phrase id="fldcaption" value="key value" />
+      </field>
+      <field id="old_value">
+        <phrase id="fldcaption" value="old value" />
+      </field>
+      <field id="new_value">
+        <phrase id="fldcaption" value="new value" />
+      </field>
+    </table>
+    <table id="systems">
+      <phrase id="tblcaption" value="systems" />
+      <field id="system_id">
+        <phrase id="fldcaption" value="system id" />
+      </field>
+      <field id="system_name">
+        <phrase id="fldcaption" value="system name" />
+      </field>
+      <field id="system_code">
+        <phrase id="fldcaption" value="system code" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="level_permissions">
+        <phrase id="fldcaption" value="level permissions" />
+      </field>
+    </table>
+    <table id="user_level_assignments">
+      <phrase id="tblcaption" value="user level assignments" />
+      <field id="assignment_id">
+        <phrase id="fldcaption" value="assignment id" />
+      </field>
+      <field id="system_id">
+        <phrase id="fldcaption" value="system id" />
+      </field>
+      <field id="user_level_id">
+        <phrase id="fldcaption" value="user level id" />
+      </field>
+      <field id="user_id">
+        <phrase id="fldcaption" value="user id" />
+      </field>
+      <field id="assigned_by">
+        <phrase id="fldcaption" value="assigned by" />
+      </field>
+      <field id="created_at">
+        <phrase id="fldcaption" value="created at" />
+      </field>
+    </table>
+    <table id="user_level_permissions">
+      <phrase id="tblcaption" value="user level permissions" />
+      <field id="user_level_id">
+        <phrase id="fldcaption" value="user level id" />
+      </field>
+      <field id="table_name">
+        <phrase id="fldcaption" value="table name" />
+      </field>
+      <field id="_permission">
+        <phrase id="fldcaption" value="permission" />
+      </field>
+    </table>
+    <table id="_user_levels">
+      <phrase id="tblcaption" value="user levels" />
+      <field id="user_level_id">
+        <phrase id="fldcaption" value="user level id" />
+      </field>
+      <field id="system_id">
+        <phrase id="fldcaption" value="system id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+    </table>
+    <table id="users">
+      <phrase id="tblcaption" value="users" />
+      <field id="user_id">
+        <phrase id="fldcaption" value="user id" />
+      </field>
+      <field id="department_id">
+        <phrase id="fldcaption" value="department" />
+      </field>
+      <field id="_username">
+        <phrase id="fldcaption" value="username" />
+      </field>
+      <field id="_email">
+        <phrase id="fldcaption" value="email" />
+      </field>
+      <field id="password_hash">
+        <phrase id="fldcaption" value="password hash" />
+      </field>
+      <field id="first_name">
+        <phrase id="fldcaption" value="first name" />
+      </field>
+      <field id="middle_name">
+        <phrase id="fldcaption" value="middle name" />
+      </field>
+      <field id="last_name">
+        <phrase id="fldcaption" value="last name" />
+      </field>
+      <field id="date_created">
+        <phrase id="fldcaption" value="date created" />
+      </field>
+      <field id="last_login">
+        <phrase id="fldcaption" value="last login" />
+      </field>
+      <field id="is_active">
+        <phrase id="fldcaption" value="is active" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="user_level_id">
+        <phrase id="fldcaption" value="user level id" />
+      </field>
+      <field id="reports_to_user_id">
+        <phrase id="fldcaption" value="reports to user id" />
+      </field>
+      <field id="photo">
+        <phrase id="fldcaption" value="photo" />
+      </field>
+      <field id="mobile_number">
+        <phrase id="fldcaption" value="mobile number" />
+      </field>
+      <field id="_profile">
+        <phrase id="fldcaption" value="profile" />
+      </field>
+    </table>
+    <table id="aggregated_audit_logs">
+      <phrase id="tblcaption" value="audit logs" />
+      <field id="aggregated_id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="action_date">
+        <phrase id="fldcaption" value="action date" />
+      </field>
+      <field id="script">
+        <phrase id="fldcaption" value="script" />
+      </field>
+      <field id="user">
+        <phrase id="fldcaption" value="user" />
+      </field>
+      <field id="_action">
+        <phrase id="fldcaption" value="action" />
+      </field>
+      <field id="_table">
+        <phrase id="fldcaption" value="table" />
+      </field>
+      <field id="action_type">
+        <phrase id="fldcaption" value="action type" />
+      </field>
+      <field id="details">
+        <phrase id="fldcaption" value="details" />
+      </field>
+      <field id="action_count">
+        <phrase id="fldcaption" value="action count" />
+      </field>
+    </table>
+    <table id="maindashboard">
+      <phrase id="tblcaption" value="Dashboard" />
+    </table>
+    <table id="departments">
+      <phrase id="tblcaption" value="departments" />
+      <field id="department_id">
+        <phrase id="fldcaption" value="department id" />
+      </field>
+      <field id="department_name">
+        <phrase id="fldcaption" value="department name" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+    </table>
+    <table id="notifications">
+      <phrase id="tblcaption" value="notifications" />
+      <field id="id">
+        <phrase id="fldcaption" value="id" />
+      </field>
+      <field id="timestamp">
+        <phrase id="fldcaption" value="timestamp" />
+      </field>
+      <field id="type">
+        <phrase id="fldcaption" value="type" />
+      </field>
+      <field id="target">
+        <phrase id="fldcaption" value="target" />
+      </field>
+      <field id="user_id">
+        <phrase id="fldcaption" value="user id" />
+      </field>
+      <field id="subject">
+        <phrase id="fldcaption" value="subject" />
+      </field>
+      <field id="body">
+        <phrase id="fldcaption" value="body" />
+      </field>
+      <field id="link">
+        <phrase id="fldcaption" value="link" />
+      </field>
+      <field id="from_system">
+        <phrase id="fldcaption" value="from system" />
+      </field>
+      <field id="is_read">
+        <phrase id="fldcaption" value="is read" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="created_at">
+        <phrase id="fldcaption" value="created at" />
+      </field>
+    </table>
+    <table id="client_contacts">
+      <phrase id="tblcaption" value="client contacts" />
+      <field id="contact_id">
+        <phrase id="fldcaption" value="contact id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="position">
+        <phrase id="fldcaption" value="position" />
+      </field>
+      <field id="_email">
+        <phrase id="fldcaption" value="email" />
+      </field>
+      <field id="phone">
+        <phrase id="fldcaption" value="phone" />
+      </field>
+      <field id="mobile">
+        <phrase id="fldcaption" value="mobile" />
+      </field>
+      <field id="is_primary">
+        <phrase id="fldcaption" value="is primary" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="is_technical">
+        <phrase id="fldcaption" value="is technical" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+    </table>
+    <table id="client_contracts">
+      <phrase id="tblcaption" value="client contracts" />
+      <field id="contract_id">
+        <phrase id="fldcaption" value="contract id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="contract_code">
+        <phrase id="fldcaption" value="contract code" />
+      </field>
+      <field id="start_date">
+        <phrase id="fldcaption" value="start date" />
+      </field>
+      <field id="end_date">
+        <phrase id="fldcaption" value="end date" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="contract_type">
+        <phrase id="fldcaption" value="contract type" />
+      </field>
+      <field id="service_level">
+        <phrase id="fldcaption" value="service level" />
+      </field>
+      <field id="auto_renewal">
+        <phrase id="fldcaption" value="auto renewal" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="renewal_notice_days">
+        <phrase id="fldcaption" value="renewal notice days" />
+      </field>
+      <field id="created_by">
+        <phrase id="fldcaption" value="created by" />
+      </field>
+      <field id="created_at">
+        <phrase id="fldcaption" value="created at" />
+      </field>
+    </table>
+    <table id="client_documents">
+      <phrase id="tblcaption" value="client documents" />
+      <field id="document_id">
+        <phrase id="fldcaption" value="document id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="document_type">
+        <phrase id="fldcaption" value="document type" />
+      </field>
+      <field id="_title">
+        <phrase id="fldcaption" value="title" />
+      </field>
+      <field id="file_path">
+        <phrase id="fldcaption" value="file path" />
+      </field>
+      <field id="upload_date">
+        <phrase id="fldcaption" value="upload date" />
+      </field>
+      <field id="expiry_date">
+        <phrase id="fldcaption" value="expiry date" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="uploaded_by">
+        <phrase id="fldcaption" value="uploaded by" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+    </table>
+    <table id="client_equipment">
+      <phrase id="tblcaption" value="client equipment" />
+      <field id="equipment_id">
+        <phrase id="fldcaption" value="equipment id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="contract_id">
+        <phrase id="fldcaption" value="contract id" />
+      </field>
+      <field id="tower_equipment_id">
+        <phrase id="fldcaption" value="tower equipment id" />
+      </field>
+      <field id="installation_date">
+        <phrase id="fldcaption" value="installation date" />
+      </field>
+      <field id="removal_date">
+        <phrase id="fldcaption" value="removal date" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="maintenance_schedule">
+        <phrase id="fldcaption" value="maintenance schedule" />
+      </field>
+      <field id="last_maintenance_date">
+        <phrase id="fldcaption" value="last maintenance date" />
+      </field>
+      <field id="next_maintenance_date">
+        <phrase id="fldcaption" value="next maintenance date" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+    </table>
+    <table id="client_types">
+      <phrase id="tblcaption" value="client types" />
+      <field id="type_id">
+        <phrase id="fldcaption" value="type id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="priority_level">
+        <phrase id="fldcaption" value="priority level" />
+      </field>
+      <field id="is_active">
+        <phrase id="fldcaption" value="is active" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+    </table>
+    <table id="clients">
+      <phrase id="tblcaption" value="clients" />
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="client_code">
+        <phrase id="fldcaption" value="client code" />
+      </field>
+      <field id="company_name">
+        <phrase id="fldcaption" value="company name" />
+      </field>
+      <field id="type_id">
+        <phrase id="fldcaption" value="type id" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="account_manager_id">
+        <phrase id="fldcaption" value="account manager id" />
+      </field>
+      <field id="registration_date">
+        <phrase id="fldcaption" value="registration date" />
+      </field>
+      <field id="website">
+        <phrase id="fldcaption" value="website" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+      <field id="created_by">
+        <phrase id="fldcaption" value="created by" />
+      </field>
+      <field id="created_at">
+        <phrase id="fldcaption" value="created at" />
+      </field>
+    </table>
+    <table id="contract_services">
+      <phrase id="tblcaption" value="contract services" />
+      <field id="contract_id">
+        <phrase id="fldcaption" value="contract id" />
+      </field>
+      <field id="service_id">
+        <phrase id="fldcaption" value="service id" />
+      </field>
+      <field id="quantity">
+        <phrase id="fldcaption" value="quantity" />
+      </field>
+      <field id="start_date">
+        <phrase id="fldcaption" value="start date" />
+      </field>
+      <field id="end_date">
+        <phrase id="fldcaption" value="end date" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="sla_terms">
+        <phrase id="fldcaption" value="sla terms" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+    </table>
+    <table id="contract_terms">
+      <phrase id="tblcaption" value="contract terms" />
+      <field id="term_id">
+        <phrase id="fldcaption" value="term id" />
+      </field>
+      <field id="contract_id">
+        <phrase id="fldcaption" value="contract id" />
+      </field>
+      <field id="term_type">
+        <phrase id="fldcaption" value="term type" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="value">
+        <phrase id="fldcaption" value="value" />
+      </field>
+      <field id="priority">
+        <phrase id="fldcaption" value="priority" />
+      </field>
+      <field id="is_mandatory">
+        <phrase id="fldcaption" value="is mandatory" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+    </table>
+    <table id="service_requests">
+      <phrase id="tblcaption" value="service requests" />
+      <field id="request_id">
+        <phrase id="fldcaption" value="request id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="equipment_id">
+        <phrase id="fldcaption" value="equipment id" />
+      </field>
+      <field id="request_type">
+        <phrase id="fldcaption" value="request type" />
+      </field>
+      <field id="priority">
+        <phrase id="fldcaption" value="priority" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="requested_by">
+        <phrase id="fldcaption" value="requested by" />
+      </field>
+      <field id="requested_date">
+        <phrase id="fldcaption" value="requested date" />
+      </field>
+      <field id="scheduled_date">
+        <phrase id="fldcaption" value="scheduled date" />
+      </field>
+      <field id="completion_date">
+        <phrase id="fldcaption" value="completion date" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="assigned_to">
+        <phrase id="fldcaption" value="assigned to" />
+      </field>
+      <field id="resolution">
+        <phrase id="fldcaption" value="resolution" />
+      </field>
+      <field id="response_time_minutes">
+        <phrase id="fldcaption" value="response time minutes" />
+      </field>
+      <field id="notes">
+        <phrase id="fldcaption" value="notes" />
+      </field>
+    </table>
+    <table id="service_types">
+      <phrase id="tblcaption" value="service types" />
+      <field id="service_id">
+        <phrase id="fldcaption" value="service id" />
+      </field>
+      <field id="name">
+        <phrase id="fldcaption" value="name" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="sla_hours">
+        <phrase id="fldcaption" value="sla hours" />
+      </field>
+      <field id="severity_level">
+        <phrase id="fldcaption" value="severity level" />
+      </field>
+      <field id="maintenance_frequency">
+        <phrase id="fldcaption" value="maintenance frequency" />
+      </field>
+      <field id="is_active">
+        <phrase id="fldcaption" value="is active" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+    </table>
+    <table id="support_ticket_updates">
+      <phrase id="tblcaption" value="support ticket updates" />
+      <field id="update_id">
+        <phrase id="fldcaption" value="update id" />
+      </field>
+      <field id="ticket_id">
+        <phrase id="fldcaption" value="ticket id" />
+      </field>
+      <field id="update_type">
+        <phrase id="fldcaption" value="update type" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="updated_by">
+        <phrase id="fldcaption" value="updated by" />
+      </field>
+      <field id="updated_at">
+        <phrase id="fldcaption" value="updated at" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+    </table>
+    <table id="support_tickets">
+      <phrase id="tblcaption" value="support tickets" />
+      <field id="ticket_id">
+        <phrase id="fldcaption" value="ticket id" />
+      </field>
+      <field id="client_id">
+        <phrase id="fldcaption" value="client id" />
+      </field>
+      <field id="equipment_id">
+        <phrase id="fldcaption" value="equipment id" />
+      </field>
+      <field id="subject">
+        <phrase id="fldcaption" value="subject" />
+      </field>
+      <field id="description">
+        <phrase id="fldcaption" value="description" />
+      </field>
+      <field id="priority">
+        <phrase id="fldcaption" value="priority" />
+      </field>
+      <field id="category">
+        <phrase id="fldcaption" value="category" />
+      </field>
+      <field id="submitted_by">
+        <phrase id="fldcaption" value="submitted by" />
+      </field>
+      <field id="assigned_to">
+        <phrase id="fldcaption" value="assigned to" />
+      </field>
+      <field id="created_at">
+        <phrase id="fldcaption" value="created at" />
+      </field>
+      <field id="status">
+        <phrase id="fldcaption" value="status" />
+      </field>
+      <field id="resolution">
+        <phrase id="fldcaption" value="resolution" />
+      </field>
+      <field id="closed_at">
+        <phrase id="fldcaption" value="closed at" />
+      </field>
+      <field id="response_time_minutes">
+        <phrase id="fldcaption" value="response time minutes" />
+      </field>
+      <field id="resolution_time_minutes">
+        <phrase id="fldcaption" value="resolution time minutes" />
+      </field>
+      <field id="sla_compliant">
+        <phrase id="fldcaption" value="sla compliant" />
+        <phrase id="fldtagvalue1" value="1" />
+        <phrase id="fldtagcaption1" value="Yes" />
+        <phrase id="fldtagvalue2" value="0" />
+        <phrase id="fldtagcaption2" value="No" />
+      </field>
+      <field id="closed_by">
+        <phrase id="fldcaption" value="closed by" />
+      </field>
+    </table>
+  </project>
+</ew-language>

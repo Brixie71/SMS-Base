@@ -1,0 +1,24 @@
+
+
+# Ignore everything in SCS
+/SCS/*
+
+# Don't ignore these specific directories
+!/SCS/_source/
+!/SCS/app/
+
+# But ignore specific config files in src
+/SCS/src/config.development.php
+/SCS/src/config.production.php
+
+# Keep config.sample.php
+!/SCS/src/config.sample.php
+
+
+# Ignore all vendor directories in any subfolder
+**/vendor/
+**/src/config.development.php
+**/src/config.production.php
+/private
+**/temp_uploads
+**/log/*.log

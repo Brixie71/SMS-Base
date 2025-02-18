@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <!-- Definitions -->
+  <defs>
+    <!-- Left clip path -->
+    <clipPath id="leftClip">
+      <path d="M200 100 L70 400 L180 400 Z"/>
+    </clipPath>
+    <!-- Right clip path -->
+    <clipPath id="rightClip">
+      <path d="M200 100 L330 400 L220 400 Z"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Blue section -->
+  <path d="M200 100 L70 400 L180 400 Z" fill="#0033a0"/>
+  
+  <!-- Animated left rays -->
+  <g clip-path="url(#leftClip)">
+    <!-- Ray 1 -->
+    <line x1="200" y1="400" x2="200" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Ray 2 -->
+    <line x1="200" y1="400" x2="170" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+    </line>
+    <!-- Ray 3 -->
+    <line x1="200" y1="400" x2="140" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+    </line>
+    <!-- Ray 4 -->
+    <line x1="200" y1="400" x2="110" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </line>
+    <!-- Ray 5 -->
+    <line x1="200" y1="400" x2="80" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+    </line>
+  </g>
+
+  <!-- Red section -->
+  <path d="M200 100 L330 400 L220 400 Z" fill="#ff0000"/>
+  
+  <!-- Animated right rays -->
+  <g clip-path="url(#rightClip)">
+    <!-- Ray 1 -->
+    <line x1="200" y1="400" x2="200" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Ray 2 -->
+    <line x1="200" y1="400" x2="230" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+    </line>
+    <!-- Ray 3 -->
+    <line x1="200" y1="400" x2="260" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+    </line>
+    <!-- Ray 4 -->
+    <line x1="200" y1="400" x2="290" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </line>
+    <!-- Ray 5 -->
+    <line x1="200" y1="400" x2="320" y2="100" stroke="#ffd700" stroke-width="2">
+      <animate attributeName="y2" values="350;100;350" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+    </line>
+  </g>
+
+  <!-- Center yellow section -->
+  <path d="M200 100 L180 400 L220 400 Z" fill="#ffd700">
+    <animate attributeName="fill-opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Text -->
+  <text x="200" y="450" font-family="Arial, sans-serif" font-weight="bold" font-size="36" text-anchor="middle" fill="#000000">PHILTOWER</text>
+</svg>

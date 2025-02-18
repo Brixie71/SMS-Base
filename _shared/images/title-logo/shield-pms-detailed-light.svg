@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1190 512" style="enable-background:new 0 0 1190 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.9;fill:#FF6600;enable-background:new    ;}
+	.st2{opacity:0.3;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:1.5;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-dasharray:8,8;}
+	.st5{fill:#003399;stroke:#FFFFFF;stroke-width:2;}
+	.st6{fill:#FFFFFF;enable-background:new    ;}
+	.st7{font-family:'ArialMT';}
+	.st8{font-size:10px;}
+	.st9{opacity:0.8;fill:#FFFFFF;enable-background:new    ;}
+	.st10{fill:#FF6600;}
+	.st11{opacity:0.8;}
+	.st12{fill:#FFFFFF;}
+	.st13{font-family:'Arial';}
+	.st14{opacity:0.2;fill:none;stroke:#FFFFFF;stroke-width:2;enable-background:new    ;}
+</style>
+<g>
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-40.8549" y1="676.522" x2="-40.015" y2="675.6822" gradientTransform="matrix(448 0 0 -512 18359 346402.5938)">
+			<stop  offset="0" style="stop-color:#003399"/>
+			<stop  offset="1" style="stop-color:#002266"/>
+		</linearGradient>
+		<path class="st0" d="M228.7,41c112.5,0,188.1,26.9,188.1,26.9l-26.9,335.9c0,0-48.7,67.2-161.2,67.2S67.4,403.8,67.4,403.8
+			L40.5,67.9C40.5,67.9,116.1,41,228.7,41z"/>
+		<path class="st1" d="M134.6,148.5h188.1c7.4,0,13.4,6,13.4,13.4v188.1c0,7.4-6,13.4-13.4,13.4H134.6c-7.4,0-13.4-6-13.4-13.4
+			V161.9C121.2,154.5,127.2,148.5,134.6,148.5z"/>
+		<g class="st2">
+			<line class="st3" x1="121.2" y1="202.2" x2="336.2" y2="202.2"/>
+			<line class="st3" x1="121.2" y1="256" x2="336.2" y2="256"/>
+			<line class="st3" x1="121.2" y1="309.8" x2="336.2" y2="309.8"/>
+			<line class="st3" x1="174.9" y1="148.5" x2="174.9" y2="363.5"/>
+			<line class="st3" x1="228.7" y1="148.5" x2="228.7" y2="363.5"/>
+			<line class="st3" x1="282.4" y1="148.5" x2="282.4" y2="363.5"/>
+		</g>
+		<g>
+			<path class="st4" d="M148,188.8c26.9,0,53.8,0,80.6,0s53.8,0,80.6,0			">
+<animate  accumulate="none" additive="replace" attributeName="stroke-dashoffset" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="0;100">
+					</animate>
+			</path>
+			<path class="st4" d="M148,256c26.9,0,53.8,0,80.6,0s53.8,0,80.6,0			">
+<animate  accumulate="none" additive="replace" attributeName="stroke-dashoffset" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="0;100">
+					</animate>
+			</path>
+			<path class="st4" d="M148,323.2c26.9,0,53.8,0,80.6,0s53.8,0,80.6,0			">
+<animate  accumulate="none" additive="replace" attributeName="stroke-dashoffset" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="0;100">
+					</animate>
+			</path>
+		</g>
+		<g>
+			<circle class="st5" cx="132.7" cy="176" r="10">
+			
+				<animate  accumulate="none" additive="replace" attributeName="cx" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="160;352;160">
+				</animate>
+			</circle>
+			<text transform="matrix(1 0 0 1 126.5518 176)" class="st6 st7 st8">P1<animate  accumulate="none" additive="replace" attributeName="x" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="160;352;160"></animate></text>
+		</g>
+		<g>
+			<circle class="st5" cx="324.7" cy="256" r="10">
+			
+				<animate  accumulate="none" additive="replace" attributeName="cx" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="352;160;352">
+				</animate>
+			</circle>
+			<text transform="matrix(1 0 0 1 318.5518 256)" class="st6 st7 st8">P2<animate  accumulate="none" additive="replace" attributeName="x" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="352;160;352"></animate></text>
+		</g>
+		<g>
+			<circle class="st5" cx="132.7" cy="336" r="10">
+			
+				<animate  accumulate="none" additive="replace" attributeName="cx" begin="3s" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="160;352;160">
+				</animate>
+			</circle>
+			<text transform="matrix(1 0 0 1 126.5518 336)" class="st6 st7 st8">P3<animate  accumulate="none" additive="replace" attributeName="x" begin="3s" calcMode="linear" dur="6s" fill="remove" repeatCount="indefinite" restart="always" values="160;352;160"></animate></text>
+		</g>
+		<g>
+			<circle class="st9" cx="148" cy="188.8" r="5">
+			
+				<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="4;8;4">
+				</animate>
+			</circle>
+			<circle class="st9" cx="228.7" cy="188.8" r="5">
+			
+				<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="8;4;8">
+				</animate>
+			</circle>
+			<circle class="st9" cx="309.3" cy="188.8" r="5">
+			
+				<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="2s" fill="remove" repeatCount="indefinite" restart="always" values="4;8;4">
+				</animate>
+			</circle>
+		</g>
+		<g class="st2">
+			<circle class="st10" cx="228.7" cy="176" r="40">
+			
+				<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.1;0.3;0.1">
+				</animate>
+			</circle>
+			<circle class="st10" cx="228.7" cy="256" r="40">
+			
+				<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.3;0.1;0.3">
+				</animate>
+			</circle>
+			<circle class="st10" cx="228.7" cy="336" r="40">
+			
+				<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.1;0.3;0.1">
+				</animate>
+			</circle>
+		</g>
+		<g class="st11">
+			<text transform="matrix(1 0 0 1 112.6675 148)" class="st12 st13 st8">North Route</text>
+			<text transform="matrix(1 0 0 1 112.6675 228)" class="st12 st13 st8">Central Route</text>
+			<text transform="matrix(1 0 0 1 112.6675 308)" class="st12 st13 st8">South Route</text>
+		</g>
+		<circle class="st14" cx="228.7" cy="256" r="107.5">
+		
+			<animate  accumulate="none" additive="replace" attributeName="r" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0;128">
+			</animate>
+		
+			<animate  accumulate="none" additive="replace" attributeName="opacity" calcMode="linear" dur="3s" fill="remove" repeatCount="indefinite" restart="always" values="0.6;0">
+			</animate>
+		</circle>
+	</g>
+	<g>
+		<path class="st12" d="M484.6,368.5H464V193.1h-29.2l6.7-19.9h43V368.5z M655.2,226.8c0,22.9-8.1,42.5-24.4,58.7
+			c-16.3,16.3-35.9,24.4-58.9,24.4h-58.3v58.5h-19.9V290h78.7c17.3,0,32-6.2,44.4-18.6c12.3-12.4,18.5-27.3,18.5-44.6
+			c0-17.4-6.1-32.2-18.4-44.5c-12.3-12.3-27.1-18.5-44.5-18.5h-128l6.7-20.2h120.8c23,0,42.6,8.1,58.9,24.4
+			C647.1,184.2,655.2,203.8,655.2,226.8z M626.4,226.8c0,14.8-5.3,27.6-15.8,38.1c-10.6,10.6-23.3,15.8-38.1,15.8h-78.7V173.2h78.7
+			c14.8,0,27.6,5.2,38.1,15.7C621.1,199.3,626.4,212,626.4,226.8z M605.8,226.8c0-9.3-3.3-17.3-10-23.8c-6.6-6.6-14.6-9.9-23.9-9.9
+			h-58.3v67.4h58.3c9.3,0,17.3-3.3,23.9-9.9C602.5,244.1,605.8,236.1,605.8,226.8z"/>
+		<path class="st12" d="M947,368.5h-19.9V199.8c0-24-11.9-36.1-35.6-36.1H693.3v204.7h-20.5V143.5h218.5c17.3,0,30.9,5,40.9,15.1
+			c10,10.1,15,23.8,15,41.2V368.5z M805.7,368.5h-20.5V199.8c0-2.8-0.2-4.9-0.6-6.1c-1.3-0.4-3-0.6-5.2-0.6h-57.1v175.4h-19.9V173.2
+			h103.4V368.5z M918.2,368.5h-20.5V199.8c0-2.8-0.2-4.9-0.6-6.1c-1.3-0.4-3.2-0.6-5.8-0.6h-56.5v175.4h-19.9V173.2h76.7
+			c17.8,0,26.7,8.9,26.7,26.7V368.5z"/>
+		<path class="st12" d="M1141.1,213.7h-19.9v-49.9h-84.5c-13.2,0-24.5,4.8-34,14.3c-9.5,9.5-14.2,21-14.2,34.3
+			c0,13.3,4.7,24.6,14.1,34c9.4,9.4,20.8,14.1,34,14.1h44.7c10.8,0,20,3.8,27.7,11.5s11.5,16.9,11.5,27.7c0,10.8-3.8,20.1-11.5,27.8
+			c-7.7,7.8-16.9,11.7-27.7,11.7h-77.3v-42.5h19.9v22.3h57.1c5.2,0,9.7-2,13.4-5.9c3.7-3.9,5.6-8.5,5.6-13.7c0-5.2-1.9-9.7-5.6-13.4
+			c-3.7-3.7-8.2-5.6-13.4-5.6h-44.7c-18.8,0-34.9-6.7-48.3-20.1C974.7,247,968,230.9,968,212.1c0-18.9,6.7-35.1,20.1-48.5
+			c13.4-13.4,29.5-20.1,48.3-20.1h104.8V213.7z M1149.5,299.5c0,18.9-6.7,35.1-20.1,48.6c-13.4,13.5-29.5,20.3-48.3,20.3H974.4
+			v-71.7H995v51.4h86.4c13.3,0,24.6-4.8,34-14.3c9.4-9.5,14.1-20.9,14.1-34.2c0-13.3-4.7-24.6-14.1-34c-9.4-9.4-20.8-14.1-34-14.1
+			h-44.7c-10.8,0-20-3.8-27.6-11.5c-7.6-7.7-11.5-16.9-11.5-27.7c0-10.9,3.8-20.1,11.5-27.8c7.6-7.6,16.8-11.4,27.6-11.4h75.6v40.5
+			h-20.5v-20.5h-55.4c-5.1,0-9.5,1.9-13.3,5.6c-3.7,3.7-5.6,8.2-5.6,13.5c0,5.1,1.9,9.6,5.6,13.3c3.7,3.7,8.1,5.6,13.3,5.6h44.7
+			c18.9,0,35.1,6.7,48.4,20.1S1149.5,280.6,1149.5,299.5z"/>
+	</g>
+</g>
+</svg>

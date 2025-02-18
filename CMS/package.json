@@ -1,0 +1,11 @@
+{
+    "name": "cms",
+    "version": "24.16.2",
+    "description": "cms",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "private": true,
+    "dependencies": {},
+    "engines": {
+        "node": ">=18"
+    }
+}

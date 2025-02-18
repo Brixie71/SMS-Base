@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Document Stack -->
+  <g>
+    <rect x="35" y="30" width="30" height="35" fill="#0038A8" rx="2">
+      <animate attributeName="y" values="32;30;32" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="38" y="35" width="24" height="4" fill="#FCD116" rx="1"/>
+    <rect x="38" y="42" width="24" height="4" fill="#FCD116" rx="1"/>
+    <rect x="38" y="49" width="16" height="4" fill="#FCD116" rx="1"/>
+  </g>
+
+  <!-- Client Icons -->
+  <circle cx="40" cy="65" r="5" fill="#CE1126">
+    <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="65" r="5" fill="#CE1126">
+    <animate attributeName="r" values="5;6;5" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="65" r="5" fill="#CE1126">
+    <animate attributeName="r" values="5;6;5" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>

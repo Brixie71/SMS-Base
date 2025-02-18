@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background Triangle -->
+  <path d="M50 10 L90 80 L10 80 Z" fill="#FCD116" stroke="#0038A8" stroke-width="2">
+    <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Tower Structure -->
+  <path d="M50 25 L60 75 L40 75 Z" fill="#0038A8">
+    <animate attributeName="fill" values="#0038A8;#CE1126;#0038A8" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Signal Waves -->
+  <path d="M40 45 Q50 35 60 45" fill="none" stroke="#CE1126" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M35 35 Q50 25 65 35" fill="none" stroke="#CE1126" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M30 25 Q50 15 70 25" fill="none" stroke="#CE1126" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </path>
+</svg>
