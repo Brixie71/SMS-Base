@@ -195,7 +195,7 @@ $CONFIG = [
     "CHECK_TOKEN" => true,
 
     // Remove XSS
-    "REMOVE_XSS" => true,
+    "REMOVE_XSS" => false,
 
     // Model path
     "MODEL_PATH" => "models/", // With trailing delimiter

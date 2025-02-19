@@ -33,6 +33,7 @@ class Userpriv extends UserLevels
 
     // Title
     public $Title = null; // Title for <title> tag
+
     // Rendering View
     public $RenderingView = false;
 
@@ -130,6 +131,7 @@ class Userpriv extends UserLevels
 
         // Language object
         $Language = Container("app.language");
+
         // Table object (_user_levels)
         if (!isset($GLOBALS["_user_levels"]) || $GLOBALS["_user_levels"]::class == PROJECT_NAMESPACE . "_user_levels") {
             $GLOBALS["_user_levels"] = &$this;
@@ -137,13 +139,17 @@ class Userpriv extends UserLevels
 
         // Start timer
         $DebugTimer = Container("debug.timer");
+
         // Debug message
         LoadDebugMessage();
+
         // Open connection
         $GLOBALS["Conn"] ??= $this->getConnection();
+
         // User table object
         $UserTable = Container("usertable");
     }
+
     // Get content from stream
     public function getContents(): string
     {
@@ -208,6 +214,7 @@ class Userpriv extends UserLevels
 
         // Close connection
         CloseConnections();
+
         // Return for API
         if (IsApi()) {
             $res = $url === true;
@@ -255,6 +262,7 @@ class Userpriv extends UserLevels
 
         // View
         $this->View = Get(Config("VIEW"));
+
         // Load user profile
         if (IsLoggedIn()) {
             Profile()->setUserName(CurrentUserName())->loadFromStorage();
@@ -278,23 +286,6 @@ class Userpriv extends UserLevels
         $this->UserLevelPrivList = $GLOBALS["USER_LEVEL_PRIVS"];
         $ar = $GLOBALS["USER_LEVEL_TABLES"];
 
-        if ($user_level_id = Get("user_level_id")) {
-            $systemInfo = ExecuteRow("SELECT
-                    systems.level_permissions, 
-                    user_levels.user_level_id
-            FROM
-                    systems
-                    INNER JOIN
-                    user_levels
-                    ON 
-                            systems.system_id = user_levels.system_id
-            WHERE
-                    user_levels.user_level_id = $user_level_id");
-            # Convert to array
-            if (!empty($systemInfo["level_permissions"])) {
-                    $ar = json_decode($systemInfo["level_permissions"], true);
-            }
-        }
         // Set up allowed table list
         foreach ($ar as $t) {
             if ($t[3]) { // Allowed
@@ -322,57 +313,17 @@ class Userpriv extends UserLevels
                 $this->Disabled = "";
             }
         } else {
-            if (Post("action") == "update") {
-                $this->CurrentAction = Post("action");
-                
-                // Get the user_level_id from the form
-                $user_level_id = Post("x_user_level_id");
-                $this->user_level_id->setFormValue($user_level_id);
-                
-                // Load the level_permissions for this user_level_id
-                $systemInfo = ExecuteRow("SELECT
-                        systems.level_permissions,
-                        user_levels.user_level_id
-                FROM
-                        systems
-                        INNER JOIN
-                        user_levels
-                        ON
-                                systems.system_id = user_levels.system_id
-                WHERE
-                        user_levels.user_level_id = " . $user_level_id);
-                
-                if (!empty($systemInfo["level_permissions"])) {
-                    $permissionsArray = json_decode($systemInfo["level_permissions"], true);
-                } else {
-                    $permissionsArray = [];
-                }
-                
-                // Process the privileges
-                $this->Privileges = [];
-                
-                foreach ($permissionsArray as $tableInfo) {
-                    $tableName = $tableInfo[0];
-                    $listName = $tableInfo[5] ?? $tableInfo[1];
-                    
-                    $privilege = 0;
-                    $postIndex = array_search($tableName, array_column($permissionsArray, 0));
-                    
-                    if ($postIndex !== false) {
-                        $privilege += (int)Post("add_" . $postIndex, 0);
-                        $privilege += (int)Post("delete_" . $postIndex, 0);
-                        $privilege += (int)Post("edit_" . $postIndex, 0);
-                        $privilege += (int)Post("list_" . $postIndex, 0);
-                        $privilege += (int)Post("view_" . $postIndex, 0);
-                        $privilege += (int)Post("search_" . $postIndex, 0);
-                        $privilege += (int)Post("admin_" . $postIndex, 0);
-                        $privilege += (int)Post("import_" . $postIndex, 0);
-                        $privilege += (int)Post("lookup_" . $postIndex, 0);
-                        $privilege += (int)Post("export_" . $postIndex, 0);
-                        $privilege += (int)Post("push_" . $postIndex, 0);
-                    }
-                    
-                    $this->Privileges[$listName] = $privilege;
+            $this->CurrentAction = Post("action");
+            // Get fields from form
+            $this->user_level_id->setFormValue(Post("x_user_level_id"));
+            for ($i = 0; $i < $this->TableNameCount; $i++) {
+                if (Post("table_" . $i) !== null) {
+                    $this->Privileges[$i] = (int)Post("add_" . $i) +
+                        (int)Post("delete_" . $i) + (int)Post("edit_" . $i) +
+                        (int)Post("list_" . $i) + (int)Post("view_" . $i) +
+                        (int)Post("search_" . $i) + (int)Post("admin_" . $i) +
+                        (int)Post("import_" . $i) + (int)Post("lookup_" . $i) +
+                        (int)Post("export_" . $i) + (int)Post("push_" . $i);
                 }
             }
         }
@@ -441,72 +392,28 @@ class Userpriv extends UserLevels
     {
         global $Security;
         $c = Conn(Config("USER_LEVEL_PRIV_DBID"));
-    
-        // Fetch level_permissions for the selected user_level_id
-        $sql = "SELECT s.level_permissions 
-                FROM systems s
-                INNER JOIN user_levels ul ON s.system_id = ul.system_id
-                WHERE ul.user_level_id = " . $this->user_level_id->CurrentValue;
-        
-        $levelPermissions = ExecuteScalar($sql);
-        
-        if ($levelPermissions === false) {
-            // Handle error - couldn't fetch level_permissions
-            return false;
-        }
-    
-        $permissionsArray = json_decode($levelPermissions, true);
-        if (!is_array($permissionsArray)) {
-            // Handle error - invalid JSON in level_permissions
-            return false;
-        }
-    
-        $success = true;
-    
-        foreach ($permissionsArray as $tableInfo) {
-            $tableName = $tableInfo[4] . $tableInfo[0]; // Construct table name from prefix and name
-            $listName = $tableInfo[5] ?? $tableInfo[1]; // Get the list name, fallback to the second element if not set
-            
-            // Get privilege from $this->Privileges, default to 0 if not set
-            $privilege = $this->Privileges[$listName] ?? 0;
-    
-            $sql = "UPDATE " . Config("USER_LEVEL_PRIV_TABLE") . "
-                    SET " . Config("USER_LEVEL_PRIV_PRIV_FIELD") . " = " . $privilege . "
-                    WHERE " . Config("USER_LEVEL_PRIV_TABLE_NAME_FIELD") . " = '" . AdjustSql($tableName, Config("USER_LEVEL_PRIV_DBID")) . "'
-                    AND " . Config("USER_LEVEL_PRIV_USER_LEVEL_ID_FIELD") . " = " . $this->user_level_id->CurrentValue;
-    
-            $result = Execute($sql);
-    
-            if ($result === false) {
-                $success = false;
-                break;
-            }
-    
-            // If no rows were updated, insert a new record
-            if ($result == 0) {
-                $sql = "INSERT INTO " . Config("USER_LEVEL_PRIV_TABLE") . "
-                        (" . Config("USER_LEVEL_PRIV_TABLE_NAME_FIELD") . ", 
-                         " . Config("USER_LEVEL_PRIV_USER_LEVEL_ID_FIELD") . ", 
-                         " . Config("USER_LEVEL_PRIV_PRIV_FIELD") . ")
-                        VALUES ('" . AdjustSql($tableName, Config("USER_LEVEL_PRIV_DBID")) . "', 
-                                " . $this->user_level_id->CurrentValue . ", 
-                                " . $privilege . ")";
-    
-                $result = Execute($sql);
-                if ($result === false) {
-                    $success = false;
-                    break;
-                }
+        foreach ($this->Privileges as $i => $privilege) {
+            $table = $this->TableList[$i];
+            $cnt = count($table);
+            $sql = "SELECT COUNT(*) FROM " . Config("USER_LEVEL_PRIV_TABLE") . " WHERE " .
+                Config("USER_LEVEL_PRIV_TABLE_NAME_FIELD") . " = '" . AdjustSql($table[4] . $table[0], Config("USER_LEVEL_PRIV_DBID")) . "' AND " .
+                Config("USER_LEVEL_PRIV_USER_LEVEL_ID_FIELD") . " = " . $this->user_level_id->CurrentValue;
+            $privilege &= $table[$cnt - 1]; // Set maximum allowed privilege (protect from hacking)
+            $rs = $c->fetchOne($sql);
+            if ($rs > 0) {
+                $sql = "UPDATE " . Config("USER_LEVEL_PRIV_TABLE") . " SET " . Config("USER_LEVEL_PRIV_PRIV_FIELD") . " = " . $privilege . " WHERE " .
+                    Config("USER_LEVEL_PRIV_TABLE_NAME_FIELD") . " = '" . AdjustSql($table[4] . $table[0], Config("USER_LEVEL_PRIV_DBID")) . "' AND " .
+                    Config("USER_LEVEL_PRIV_USER_LEVEL_ID_FIELD") . " = " . $this->user_level_id->CurrentValue;
+                $c->executeStatement($sql);
+            } else {
+                $sql = "INSERT INTO " . Config("USER_LEVEL_PRIV_TABLE") . " (" . Config("USER_LEVEL_PRIV_TABLE_NAME_FIELD") . ", " . Config("USER_LEVEL_PRIV_USER_LEVEL_ID_FIELD") . ", " . Config("USER_LEVEL_PRIV_PRIV_FIELD") . ") VALUES ('" . AdjustSql($table[4] . $table[0], Config("USER_LEVEL_PRIV_DBID")) . "', " . $this->user_level_id->CurrentValue . ", " . $privilege . ")";
+                $c->executeStatement($sql);
             }
         }
-    
-        if ($success) {
-            $Security->setupUserLevel();
-            return true;
-        } else {
-            return false;
-        }
+        $Security->setupUserLevel();
+        return true;
     }
+
     // Get table caption
     protected function getTableCaption($i)
     {

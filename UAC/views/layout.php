@@ -11,60 +11,60 @@ $basePath = BasePath(true);
 <title><?= CurrentPageTitle() ?></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?= $basePath ?>css/select2.min.css?v=24.16.6">
-<link rel="stylesheet" href="<?= $basePath ?>css/select2-bootstrap5.min.css?v=24.16.6">
-<link rel="stylesheet" href="<?= $basePath ?><?= Config("FONT_AWESOME_STYLESHEET") ?>?v=24.16.6">
-<link rel="stylesheet" href="<?= $basePath ?>adminlte3/css/<?= CssFile("adminlte.css") ?>?v=24.16.6">
-<link rel="stylesheet" href="<?= $basePath ?><?= CssFile(Config("PROJECT_STYLESHEET_FILENAME")) ?>?v=24.16.6">
-<script data-pace-options='<?= JsonEncode(Config("PACE_OPTIONS")) ?>' src="<?= $basePath ?>js/pace.js?v=24.16.6"></script><!-- Single quotes for data-pace-options -->
-<script src="<?= $basePath ?>js/ewcore.min.js?v=24.16.6"></script>
+<link rel="stylesheet" href="<?= $basePath ?>css/select2.min.css?v=24.16.7">
+<link rel="stylesheet" href="<?= $basePath ?>css/select2-bootstrap5.min.css?v=24.16.7">
+<link rel="stylesheet" href="<?= $basePath ?><?= Config("FONT_AWESOME_STYLESHEET") ?>?v=24.16.7">
+<link rel="stylesheet" href="<?= $basePath ?>adminlte3/css/<?= CssFile("adminlte.css") ?>?v=24.16.7">
+<link rel="stylesheet" href="<?= $basePath ?><?= CssFile(Config("PROJECT_STYLESHEET_FILENAME")) ?>?v=24.16.7">
+<script data-pace-options='<?= JsonEncode(Config("PACE_OPTIONS")) ?>' src="<?= $basePath ?>js/pace.js?v=24.16.7"></script><!-- Single quotes for data-pace-options -->
+<script src="<?= $basePath ?>js/ewcore.min.js?v=24.16.7"></script>
 <script>
 var $rowindex$ = null;
 Object.assign(ew, <?= JsonEncode(ConfigClientVars()) ?>, <?= JsonEncode(GlobalClientVars()) ?>);
-loadjs(ew.PATH_BASE + "jquery/jquery.min.js?v=24.16.6", "jquery");
-loadjs(ew.PATH_BASE + "js/popper.min.js?v=24.16.6", "popper");
-loadjs(ew.PATH_BASE + "js/luxon.min.js?v=24.16.6", "luxon");
+loadjs(ew.PATH_BASE + "jquery/jquery.min.js?v=24.16.7", "jquery");
+loadjs(ew.PATH_BASE + "js/popper.min.js?v=24.16.7", "popper");
+loadjs(ew.PATH_BASE + "js/luxon.min.js?v=24.16.7", "luxon");
 loadjs([
-    ew.PATH_BASE + "js/mobile-detect.min.js?v=24.16.6",
-    ew.PATH_BASE + "js/purify.min.js?v=24.16.6",
-    ew.PATH_BASE + "js/cropper.min.js?v=24.16.6",
-    ew.PATH_BASE + "jquery/load-image.all.min.js?v=24.16.6"
+    ew.PATH_BASE + "js/mobile-detect.min.js?v=24.16.7",
+    ew.PATH_BASE + "js/purify.min.js?v=24.16.7",
+    ew.PATH_BASE + "js/cropper.min.js?v=24.16.7",
+    ew.PATH_BASE + "jquery/load-image.all.min.js?v=24.16.7"
 ], "others");
-loadjs(ew.PATH_BASE + "js/sweetalert2.all.min.js?v=24.16.6", "swal");
+loadjs(ew.PATH_BASE + "js/sweetalert2.all.min.js?v=24.16.7", "swal");
 <?= $Language->toJson() ?>
 ew.vars = <?= JsonEncode(GetClientVar()) ?>;
-ew.ready(["wrapper", "jquery"], ew.PATH_BASE + "jquery/jsrender.min.js?v=24.16.6", "jsrender", ew.renderJsTemplates);
-ew.ready("jquery", ew.PATH_BASE + "jquery/jquery-ui.min.js?v=24.16.6", "widget");
+ew.ready(["wrapper", "jquery"], ew.PATH_BASE + "jquery/jsrender.min.js?v=24.16.7", "jsrender", ew.renderJsTemplates);
+ew.ready("jquery", ew.PATH_BASE + "jquery/jquery-ui.min.js?v=24.16.7", "widget");
 </script>
 <?php include_once "views/menu.php"; ?>
 <script>
 var cssfiles = [
-    ew.PATH_BASE + "css/jquery.fileupload.css?v=24.16.6",
-    ew.PATH_BASE + "css/jquery.fileupload-ui.css?v=24.16.6",
-    ew.PATH_BASE + "css/cropper.min.css?v=24.16.6"
+    ew.PATH_BASE + "css/jquery.fileupload.css?v=24.16.7",
+    ew.PATH_BASE + "css/jquery.fileupload-ui.css?v=24.16.7",
+    ew.PATH_BASE + "css/cropper.min.css?v=24.16.7"
 ];
-cssfiles.push(ew.PATH_BASE + "colorbox/colorbox.css?v=24.16.6");
+cssfiles.push(ew.PATH_BASE + "colorbox/colorbox.css?v=24.16.7");
 loadjs(cssfiles, "css");
 var cssjs = [];
 <?php foreach (array_merge(Config("STYLESHEET_FILES"), Config("JAVASCRIPT_FILES")) as $file) { // External Stylesheets and JavaScripts ?>
-cssjs.push("<?= (IsRemote($file) ? "" : BasePath(true)) . $file ?>?v=24.16.6");
+cssjs.push("<?= (IsRemote($file) ? "" : BasePath(true)) . $file ?>?v=24.16.7");
 <?php } ?>
 var jqueryjs = [
-    ew.PATH_BASE + "jquery/select2.full.min.js?v=24.16.6",
-    ew.PATH_BASE + "jquery/jqueryfileupload.min.js?v=24.16.6",
-    ew.PATH_BASE + "jquery/typeahead.jquery.min.js?v=24.16.6"
+    ew.PATH_BASE + "jquery/select2.full.min.js?v=24.16.7",
+    ew.PATH_BASE + "jquery/jqueryfileupload.min.js?v=24.16.7",
+    ew.PATH_BASE + "jquery/typeahead.jquery.min.js?v=24.16.7"
 ];
-jqueryjs.push(ew.PATH_BASE + "colorbox/jquery.colorbox.min.js?v=24.16.6");
-jqueryjs.push(ew.PATH_BASE + "js/pdfobject.min.js?v=24.16.6");
-ew.ready(["jquery", "dom", "popper"], ew.PATH_BASE + "bootstrap5/js/bootstrap.min.js?v=24.16.6", "bootstrap"); // Bootstrap
-ew.ready("popper", ew.PATH_BASE + "js/tippy-bundle.umd.min.js?v=24.16.6", "tippy"); // Tippy
-ew.ready("bootstrap", ew.PATH_BASE + "adminlte3/js/adminlte.min.js?v=24.16.6", "adminlte"); // AdminLTE (After Bootstrap)
+jqueryjs.push(ew.PATH_BASE + "colorbox/jquery.colorbox.min.js?v=24.16.7");
+jqueryjs.push(ew.PATH_BASE + "js/pdfobject.min.js?v=24.16.7");
+ew.ready(["jquery", "dom", "popper"], ew.PATH_BASE + "bootstrap5/js/bootstrap.min.js?v=24.16.7", "bootstrap"); // Bootstrap
+ew.ready("popper", ew.PATH_BASE + "js/tippy-bundle.umd.min.js?v=24.16.7", "tippy"); // Tippy
+ew.ready("bootstrap", ew.PATH_BASE + "adminlte3/js/adminlte.min.js?v=24.16.7", "adminlte"); // AdminLTE (After Bootstrap)
 ew.ready(["jquery", "widget"], [jqueryjs], "jqueryjs");
-ew.ready(["bootstrap", "adminlte", "jqueryjs", "luxon", "others"], ew.PATH_BASE + "js/ew.min.js?v=24.16.6", "makerjs");
+ew.ready(["bootstrap", "adminlte", "jqueryjs", "luxon", "others"], ew.PATH_BASE + "js/ew.min.js?v=24.16.7", "makerjs");
 ew.ready("makerjs", [
     cssjs,
-    ew.PATH_BASE + "js/userfn.js?v=24.16.6",
-    ew.PATH_BASE + "js/userevent.js?v=24.16.6"
+    ew.PATH_BASE + "js/userfn.js?v=24.16.7",
+    ew.PATH_BASE + "js/userevent.js?v=24.16.7"
 ], "head");
 </script>
 <script>
@@ -237,7 +237,7 @@ ew.ready("head", [
                     <a class="nav-link" data-widget="pushmenu" data-enable-remember="true" data-ew-action="none"><i class="fa-solid fa-bars ew-icon"></i></a>
                 </li>
                 <a class="navbar-brand d-none" href="#" data-ew-action="none">
-                    <img src="<?= GetUrl("images/shield-uac-detailed-light.svg") ?>" alt="" class="brand-image ew-brand-image">
+                    <span class="brand-text">PHPMaker 2024</span>
                 </a>
             </ul>
             <!-- Right navbar links -->
@@ -250,7 +250,7 @@ ew.ready("head", [
         <div class="brand-container">
             <!-- Brand Logo //** Note: Only licensed users are allowed to change the logo ** -->
             <a href="#" class="brand-link">
-                <img src="<?= GetUrl("images/shield-uac-detailed-light.svg") ?>" alt="" class="brand-image ew-brand-image">
+                <span class="brand-text">PHPMaker 2024</span>
             </a>
             <?php if (preg_match('/\bsidebar-mini\b/', Config("BODY_CLASS"))) { ?>
             <a class="pushmenu mx-1" data-pushmenu="mini" role="button"><i class="fa-solid fa-angle-double-left"></i></a>

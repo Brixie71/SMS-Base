@@ -578,7 +578,7 @@ class Login extends Users
                 }
             }
             if ($username) {
-                // Validate user in PHILTOWER_SMS database
+                // Validate user in SCS database
                 $rs = ExecuteRow("SELECT * FROM users WHERE username = '" . AdjustSql($username) . "'", "DB");
                 if ($rs) {
                     $Security->loginUser(
